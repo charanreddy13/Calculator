@@ -21,6 +21,6 @@
     <td>3.</td>
     <td>Divya Velaga</td>
     <td>G926C285</td>
-    <td>Divyavela5</td>
+    <td>Divyavelaga1</td>
   </tr>
 </table>
