@@ -9,7 +9,7 @@
     <td>1.</td>
     <td>Charan Reddy</td>
     <td>B657X269</td>
-    <td>charanreddy.ch13</td>
+    <td>charanreddy13</td>
   </tr>
   <tr>
     <td>2.</td>
