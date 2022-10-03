@@ -6,9 +6,9 @@
     <Grid Padding="16" RowSpacing="2" ColumnSpacing="2"
           RowDefinitions="2*,*,*,*,*,*"
           ColumnDefinitions="*,*,*,*,*"
-          BackgroundColor="{DynamicResource Tertiary}">
+          BackgroundColor="{DynamicResource Primary}">
         <Label x:Name="Heading"
-               FontSize="22"
+               FontSize="44"
                LineBreakMode="NoWrap"
                Grid.ColumnSpan="5"
                Text="Select the Color to update the Theme"
@@ -23,23 +23,20 @@
 
         <Button Text="DeepRed" Grid.Row="2" Grid.Column="0"
                 Grid.ColumnSpan="2"
-                TextColor="{DynamicResource Accent}" 
+                TextColor="{DynamicResource Accent}" Clicked="OnSelectonpurpleColor"
                 BackgroundColor="{DynamicResource Tertiary }"/>
         <Button Text="Royalty" Grid.Row="2" Grid.Column="3"
                 Grid.ColumnSpan="2"
-                TextColor="{DynamicResource Accent}" 
+                TextColor="{DynamicResource Accent}" Clicked="OnSelectonpurpleColor"
                  BackgroundColor="{DynamicResource Tertiary }"/>
 
         <Button Text="Pretty" Grid.Row="4" Grid.Column="0"
                 Grid.ColumnSpan="2"
-                TextColor="{DynamicResource Accent}"
+                TextColor="{DynamicResource Accent}" Clicked="OnSelectonpurpleColor"
                  BackgroundColor="{DynamicResource Tertiary }"/>
         <Button Text="Muted" Grid.Row="4" Grid.Column="3"
                 Grid.ColumnSpan="2"
-                TextColor="{DynamicResource Accent}" 
+                TextColor="{DynamicResource Accent}" Clicked="OnSelectonpurpleColor"
                  BackgroundColor="{DynamicResource Tertiary }"/>
     </Grid>
 </ContentPage>
-
-
-
