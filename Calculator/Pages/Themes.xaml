@@ -3,10 +3,43 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Calculator.Pages.Themes"
              Title="Themes">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <Grid Padding="16" RowSpacing="2" ColumnSpacing="2"
+          RowDefinitions="2*,*,*,*,*,*"
+          ColumnDefinitions="*,*,*,*,*"
+          BackgroundColor="{DynamicResource Tertiary}">
+        <Label x:Name="Heading"
+               FontSize="22"
+               LineBreakMode="NoWrap"
+               Grid.ColumnSpan="5"
+               Text="Select the Color to update the Theme"
+               TextColor="{DynamicResource Accent}"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               Grid.Row="0"
+               BackgroundColor="{DynamicResource Secondary}"
+               
+              />
+
+
+        <Button Text="DeepRed" Grid.Row="2" Grid.Column="0"
+                Grid.ColumnSpan="2"
+                TextColor="{DynamicResource Accent}" 
+                BackgroundColor="{DynamicResource Tertiary }"/>
+        <Button Text="Royalty" Grid.Row="2" Grid.Column="3"
+                Grid.ColumnSpan="2"
+                TextColor="{DynamicResource Accent}" 
+                 BackgroundColor="{DynamicResource Tertiary }"/>
+
+        <Button Text="Pretty" Grid.Row="4" Grid.Column="0"
+                Grid.ColumnSpan="2"
+                TextColor="{DynamicResource Accent}"
+                 BackgroundColor="{DynamicResource Tertiary }"/>
+        <Button Text="Muted" Grid.Row="4" Grid.Column="3"
+                Grid.ColumnSpan="2"
+                TextColor="{DynamicResource Accent}" 
+                 BackgroundColor="{DynamicResource Tertiary }"/>
+    </Grid>
 </ContentPage>
+
+
+
