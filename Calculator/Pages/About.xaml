@@ -22,7 +22,7 @@
                HorizontalTextAlignment="Start"
                VerticalTextAlignment="End"
                TextColor="{DynamicResource Accent}"
-               BackgroundColor="{DynamicResource Tertiary}"
+               BackgroundColor="{DynamicResource Secondary}"
                />
         <Label x:Name="Wsuid"
                FontSize="22"
@@ -33,7 +33,7 @@
                HorizontalTextAlignment="Start"
                VerticalTextAlignment="End"
                TextColor="{DynamicResource Accent}"
-               BackgroundColor="{DynamicResource Tertiary}"
+               BackgroundColor="{DynamicResource Secondary}"
                />
         <Label x:Name="Githubid"
                FontSize="22"
@@ -44,7 +44,7 @@
                HorizontalTextAlignment="Start"
                VerticalTextAlignment="End"
                TextColor="{DynamicResource Accent}"
-               BackgroundColor="{DynamicResource Tertiary}"
+               BackgroundColor="{DynamicResource Secondary}"
                />
 
 
