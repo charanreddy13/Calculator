@@ -30,5 +30,11 @@
             <ShellContent ContentTemplate="{DataTemplate Pages:Themes}" />
         </Tab>
     </FlyoutItem>
+    <FlyoutItem Title="Exercise"
+                Icon="group.jpg">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate Pages:Exercise}" />
+        </Tab>
+    </FlyoutItem>
 
 </Shell>
