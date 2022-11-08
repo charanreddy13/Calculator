@@ -9,7 +9,7 @@ public static class Calculator
         switch (mathOperator)
         {
             case "÷":
-                result = value1 / value2;
+                result = value1 % value2;
                 break;
             case "×":
                 result = value1 * value2;
@@ -19,6 +19,9 @@ public static class Calculator
                 break;
             case "-":
                 result = value1 - value2;
+                break;
+            case "/":
+                result = value1 / value2;
                 break;
         }
 
