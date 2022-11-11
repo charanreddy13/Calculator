@@ -1,3 +1,6 @@
+using Calculator.Model;
+using System.Net.Http.Json;
+
 namespace Calculator.Pages;
 
 public partial class Exercise : ContentPage
