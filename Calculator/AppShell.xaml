@@ -36,5 +36,11 @@
             <ShellContent ContentTemplate="{DataTemplate Pages:Exercise}" />
         </Tab>
     </FlyoutItem>
+    <FlyoutItem Title="History"
+                Icon="group.jpg">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate Pages:History}" />
+        </Tab>
+    </FlyoutItem>
 
 </Shell>
