@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using System.Linq.Expressions;
 using Calculator.Model;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
@@ -24,5 +25,13 @@ namespace Calculator.ModelView
 
         [ObservableProperty]
         int result;
+    }
+    [RelayCommand]
+    void Add()
+    {
+        expressions.Add(expression);
+        results.Add(result);
+        result = 0;
+        expression = string.Empty;
     }
 }
