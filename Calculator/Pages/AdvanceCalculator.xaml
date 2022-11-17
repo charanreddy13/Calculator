@@ -2,7 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Calculator.Pages.AdvanceCalculator"
-             Title="Advance Calculator">
+             Title="Advance Calculator"
+             xmlns:viewmodels="clr-namespace:Calculator.ModelView"
+             x:DataType="viewmodels:HistoryViewModel">
     <Grid Padding="16" RowSpacing="2" ColumnSpacing="2"
           RowDefinitions="2*,*,*,*,*,*,*"
           ColumnDefinitions="*,*,*,*"
@@ -12,7 +14,7 @@
                FontSize="22"
                LineBreakMode="NoWrap"
                Grid.ColumnSpan="4"
-               Text=""
+               Text="{Binding Expression,Mode=TwoWay}"
                HorizontalTextAlignment="End"
                VerticalTextAlignment="Start"
                Grid.Row="0"
@@ -20,7 +22,7 @@
                 "/>
 
         <Label x:Name="resultText"
-               FontSize="64" FontAttributes="Bold" Text="0"
+               FontSize="64" FontAttributes="Bold" 
                HorizontalTextAlignment="End"
                VerticalTextAlignment="End"
                LineBreakMode="NoWrap" Grid.ColumnSpan="4" 
@@ -94,7 +96,8 @@
 
 
         <Button Text="=" Grid.Row="5" Grid.Column="3" Grid.RowSpan="2"
-               Clicked="OnCalculate" TextColor="{DynamicResource Accent}"/>
+               Clicked="OnCalculate" TextColor="{DynamicResource Accent}"
+                Command="{Binding AddCommand}"/>
 
     </Grid>
    </ContentPage>
