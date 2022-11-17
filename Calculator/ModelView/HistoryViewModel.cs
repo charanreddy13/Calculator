@@ -6,7 +6,7 @@ using CommunityToolkit.Mvvm.Input;
 
 namespace Calculator.ModelView
 {
-    public  partial class HistoryViewModel: ObservableObject
+    public partial class HistoryViewModel : ObservableObject
     {
         public HistoryViewModel()
         {
@@ -25,13 +25,14 @@ namespace Calculator.ModelView
 
         [ObservableProperty]
         int result;
-    }
-    [RelayCommand]
-    void Add()
-    {
-        expressions.Add(expression);
-        results.Add(result);
-        result = 0;
-        expression = string.Empty;
+
+        [RelayCommand]
+        void Add()
+        {
+            expressions.Add(expression);
+            results.Add(result);
+            result = 0;
+            expression = string.Empty;
+        }
     }
 }

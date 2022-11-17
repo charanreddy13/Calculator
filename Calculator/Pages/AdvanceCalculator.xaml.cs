@@ -93,7 +93,7 @@ public partial class AdvanceCalculator : ContentPage
             secondNumber = 0;
             currentState = -1;
             currentEntry = string.Empty;
-            CurrentCalculation.Text = "";
+            
 
         }
         else
@@ -147,14 +147,13 @@ public partial class AdvanceCalculator : ContentPage
                     LockNumberValue(resultText.Text);
 
                 double result = Calculator.Calculate(firstNumber, secondNumber, mathOperator);
-
-                //this.CurrentCalculation.Text = $"{firstNumber} {mathOperator} {secondNumber}";
-
                 this.resultText.Text = result.ToTrimmedString(decimalFormat);
                 firstNumber = result;
                 secondNumber = 0;
                 currentState = -1;
                 currentEntry = string.Empty;
+                CurrentCalculation.Text = "";
+               
             }
         }
     }
