@@ -1,12 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.ObjectModel;
+using Calculator.Model;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 
 namespace Calculator.ModelView
 {
-    internal class HistoryViewModel
+    public  partial class HistoryViewModel: ObservableObject
     {
+        public HistoryViewModel()
+        {
+            expressions = new ObservableCollection<string>();
+            results = new ObservableCollection<int>();
+
+        }
+        [ObservableProperty]
+        ObservableCollection<string> expressions;
+
+        [ObservableProperty]
+        ObservableCollection<int> results;
+
+        [ObservableProperty]
+        string expression;
+
+        [ObservableProperty]
+        int result;
     }
 }
