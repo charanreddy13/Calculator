@@ -24,6 +24,7 @@
     <td>Divyavelaga1</td>
   </tr>
 </table>
+<a href="https://youtu.be/-4ztAek9aGw" align="center">Project 2 Youtube link</a>
 <h2>Project 2 Contribution of teammates</h2>
 
 <table >
@@ -52,6 +53,35 @@
     <td>API connection and data passing </td>
   </tr>
 </table>
+<a href="https://youtu.be/zu6kCaWtsSw" align="center">Project 3 Youtube link</a>
+<h2>Project 3 Contribution of teammates</h2>
+
+<table >
+  <tr>
+    <th>S.NO</th>
+    <th>NAME</th>
+    <th>GITHUB ID</th>
+    <th>CONTRIBUTION</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>CHARAN REDDY</td>
+    <td>charanreddy13</td>
+    <td>Model View layer for Binding the Data</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Maheswar Reddy</td>
+    <td>maheswarnani91</td>
+    <td>Backend work for databinding for history and setting up data binding in Advance Calclator</td>
+  </tr>
+   <tr>
+    <td>3</td>
+    <td>Divya Velaga</td>
+    <td>Divyavelaga1</td>
+    <td>UI part to display the data </td>
+  </tr>
+</table>
 
 
-<a href="https://youtu.be/-4ztAek9aGw" align="center">Project 2 Youtube link</a>
+
