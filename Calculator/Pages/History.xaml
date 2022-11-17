@@ -3,10 +3,36 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Calculator.Pages.History"
              Title="History">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <Grid Padding="16" RowSpacing="2" ColumnSpacing="2"
+          RowDefinitions="*,2*"
+          ColumnDefinitions="*,*,*,*,*"
+          BackgroundColor="{DynamicResource Primary}">
+        <Label x:Name="Heading"
+               FontSize="44"
+               LineBreakMode="NoWrap"
+               Grid.ColumnSpan="5"
+               Text="Here is the list of Calculations done till now."
+               TextColor="{DynamicResource Accent}"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               Grid.Row="0"
+               BackgroundColor="{DynamicResource Secondary}"
+               
+              />
+
+
+        <CollectionView Grid.Row="1" Grid.ColumnSpan="5" ItemsSource="{Binding Expressions}" >
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="{x:Type x:String}"  >
+                    <Grid Padding="0,5" Grid.Column="2">
+                        <Frame BackgroundColor="{DynamicResource DarkAccent}" >
+                            <Label Text="{Binding .}" TextColor="{DynamicResource Accent}" FontSize="24" HorizontalTextAlignment="Center" />
+                        </Frame>
+                    </Grid>
+
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </Grid>
 </ContentPage>
