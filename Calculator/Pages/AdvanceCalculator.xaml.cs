@@ -1,11 +1,14 @@
+using Calculator.ModelView;
+
 namespace Calculator.Pages;
 
 public partial class AdvanceCalculator : ContentPage
 {
-	public AdvanceCalculator()
+	public AdvanceCalculator(HistoryViewModel his)
 	{
 		InitializeComponent();
         OnClear(this, null);
+        BindingContext = his;
     }
     string currentEntry = "";
     int currentState = 1;
@@ -90,6 +93,7 @@ public partial class AdvanceCalculator : ContentPage
             secondNumber = 0;
             currentState = -1;
             currentEntry = string.Empty;
+            CurrentCalculation.Text = "";
 
         }
         else
