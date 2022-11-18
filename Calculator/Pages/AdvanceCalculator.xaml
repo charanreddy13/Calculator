@@ -26,7 +26,8 @@
                HorizontalTextAlignment="End"
                VerticalTextAlignment="End"
                LineBreakMode="NoWrap" Grid.ColumnSpan="4" 
-               TextColor="{DynamicResource Accent}"/>
+               TextColor="{DynamicResource Accent}"
+               Text="{Binding Result,Mode=TwoWay}"/>
 
         <BoxView BackgroundColor="{StaticResource LightGray}" HeightRequest="1"
                  Grid.Row="0" VerticalOptions="End"
@@ -96,7 +97,7 @@
 
 
         <Button Text="=" Grid.Row="5" Grid.Column="3" Grid.RowSpan="2"
-               Clicked="OnCalculate" TextColor="{DynamicResource Accent}"
+               Pressed="OnCalculate" TextColor="{DynamicResource Accent}"
                 Command="{Binding AddCommand}"/>
 
     </Grid>

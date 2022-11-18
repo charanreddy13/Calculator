@@ -18,6 +18,7 @@ public static class MauiProgram
         builder.Services.AddSingleton<AdvanceCalculator>();
 		builder.Services.AddSingleton<History>();
         builder.Services.AddSingleton<HistoryViewModel>();
+        builder.Services.AddSingleton<MainPage>();
 
         return builder.Build();
 	}
