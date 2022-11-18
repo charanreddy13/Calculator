@@ -1,12 +1,15 @@
-﻿namespace Calculator;
+﻿using Calculator.ModelView;
+
+namespace Calculator;
 
 public partial class MainPage : ContentPage
 {
     
-    public MainPage()
+    public MainPage(HistoryViewModel hm)
     {
         InitializeComponent();
         OnClear(this, null);
+        BindingContext = hm;
 
     }
 

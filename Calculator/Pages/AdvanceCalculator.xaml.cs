@@ -35,6 +35,10 @@ public partial class AdvanceCalculator : ContentPage
             if (currentState < 0)
                 currentState *= -1;
         }
+        if(currentState==1)
+        {
+            this.CurrentCalculation.Text = "";
+        }
 
         if (pressed == "." && decimalFormat != "N2")
         {
@@ -93,7 +97,8 @@ public partial class AdvanceCalculator : ContentPage
             secondNumber = 0;
             currentState = -1;
             currentEntry = string.Empty;
-            
+
+           
 
         }
         else
@@ -152,8 +157,7 @@ public partial class AdvanceCalculator : ContentPage
                 secondNumber = 0;
                 currentState = -1;
                 currentEntry = string.Empty;
-                CurrentCalculation.Text = "";
-               
+                
             }
         }
     }
