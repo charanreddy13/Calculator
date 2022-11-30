@@ -1,6 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using System.Linq.Expressions;
 using Calculator.Model;
+using Calculator.service;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 
@@ -8,31 +9,55 @@ namespace Calculator.ModelView
 {
     public partial class HistoryViewModel : ObservableObject
     {
-        public HistoryViewModel()
+        private readonly IexpressionService _expressionservice;
+        public HistoryViewModel(IexpressionService expressionservice)
         {
-            expressions = new ObservableCollection<string>();
-            results = new ObservableCollection<int>();
-
+            _expressionservice = expressionservice;
         }
-        [ObservableProperty]
-        ObservableCollection<string> expressions;
 
-        [ObservableProperty]
-        ObservableCollection<int> results;
+
+        public ObservableCollection<Model.Expression> ExpressionsList { get; set; } = new ObservableCollection<Model.Expression>();
 
         [ObservableProperty]
         string expression;
 
         [ObservableProperty]
         int result;
+        [RelayCommand]
+        public async void GetExpressions()
+        {
+
+            var expressionList = await _expressionservice.GetExpressions();
+            if (expressionList?.Count > 0)
+            {
+                ExpressionsList.Clear();
+                foreach (var expression in expressionList)
+                {
+                    ExpressionsList.Add(expression);
+                }
+
+            }
+        }
+
+
 
         [RelayCommand]
-        void Add()
+        public async void Add()
         {
-            expressions.Add(expression);
-            results.Add(result);
-            result = 0;
-            expression = string.Empty;
+            await _expressionservice.AddExpression(new Model.Expression
+            {
+                expression = expression,
+                result = result
+            });
+        }
+        [RelayCommand]
+        public async void Delete()
+        {
+            foreach (var exp in ExpressionsList)
+            {
+                await _expressionservice.DeleteExpression(exp);
+            }
+            ExpressionsList.Clear();
         }
     }
 }
