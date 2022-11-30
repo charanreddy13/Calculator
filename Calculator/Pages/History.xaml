@@ -2,9 +2,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Calculator.Pages.History"
+             xmlns:model="clr-namespace:Calculator.Model"
              Title="History">
     <Grid Padding="16" RowSpacing="2" ColumnSpacing="2"
-          RowDefinitions="*,2*"
+          RowDefinitions="*,2*,*"
           ColumnDefinitions="*,*,*,*,*"
           BackgroundColor="{DynamicResource Primary}">
         <Label x:Name="Heading"
@@ -21,46 +22,30 @@
               />
 
 
-        <CollectionView Grid.Row="1" Grid.ColumnSpan="3" ItemsSource="{Binding Expressions}" >
+        <CollectionView Grid.Row="1" Grid.ColumnSpan="5" ItemsSource="{Binding ExpressionsList}" >
             <CollectionView.ItemTemplate>
-                <DataTemplate x:DataType="{x:Type x:String}"  >
+                <DataTemplate x:DataType="model:Expression"  >
                     <Grid Padding="0,5" Grid.Column="2">
-                        <Frame BackgroundColor="{DynamicResource DarkAccent}" >
-                            <Label Text="{Binding .}" TextColor="{DynamicResource Accent}" FontSize="24" HorizontalTextAlignment="Center" />
 
+                        <Frame BackgroundColor="{DynamicResource Secondary}" Margin="10" Padding="10"  >
+                            <StackLayout>
+                                <HorizontalStackLayout  Spacing="15" >
+                                    <Label Text="{Binding expression}" TextColor="{DynamicResource Accent}" FontSize="24" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                                    <Label Text="=" TextColor="{DynamicResource Accent}" FontSize="24" HorizontalTextAlignment="Center"  VerticalTextAlignment="Center" />
+                                    <Label Text="{Binding result}" TextColor="{DynamicResource Accent}" FontSize="24" HorizontalTextAlignment="Center"  VerticalTextAlignment="Center" />
+                                </HorizontalStackLayout>
+                            </StackLayout>
                         </Frame>
                     </Grid>
 
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-        <CollectionView  Grid.Row="4" Grid.ColumnSpan="1" Grid.Column="4" ItemsSource="{Binding Results}" >
-            <CollectionView.ItemTemplate>
-                <DataTemplate x:DataType="{x:Type x:String}"  >
-                    <Grid Padding="0,5" Grid.Column="2">
-                        <Frame BackgroundColor="{DynamicResource DarkAccent}" >
-                            <Label Text="{Binding .}" TextColor="{DynamicResource Accent}" FontSize="24" HorizontalTextAlignment="Center" />
+        <Button Text="Clear History" Grid.Row="2" Grid.Column="2"
+                TextColor="{DynamicResource Accent}" BackgroundColor="{DynamicResource Secondary}"
+                 Command="{Binding DeleteCommand}"/>
 
-                        </Frame>
-                    </Grid>
 
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-        <CollectionView  Grid.Row="1"  Grid.Column="3" ItemsSource="{Binding Results}" >
-            <CollectionView.ItemTemplate>
-                <DataTemplate x:DataType="{x:Type x:String}"  >
-                    <Grid Padding="0,5" Grid.Column="2">
-                        <Frame BackgroundColor="{DynamicResource DarkAccent}" >
-                            <Label Text="=" TextColor="{DynamicResource Accent}" FontSize="24" HorizontalTextAlignment="Center" />
-
-                        </Frame>
-                    </Grid>
-
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-        
 
     </Grid>
 </ContentPage>
