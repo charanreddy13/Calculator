@@ -4,9 +4,16 @@ namespace Calculator.Pages;
 
 public partial class History : ContentPage
 {
-	public History(HistoryViewModel vm)
-	{
-		InitializeComponent();
+    private readonly HistoryViewModel _viewModel;
+    public History(HistoryViewModel vm)
+    {
+        InitializeComponent();
+        _viewModel = vm;
         BindingContext = vm;
+    }
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        _viewModel.GetExpressionsCommand.Execute(null);
     }
 }
