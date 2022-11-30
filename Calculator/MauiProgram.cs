@@ -19,6 +19,7 @@ public static class MauiProgram
 		builder.Services.AddSingleton<History>();
         builder.Services.AddSingleton<HistoryViewModel>();
         builder.Services.AddSingleton<MainPage>();
+		builder.Services.AddSingleton<IexpressionService, expressionservice>();
 
         return builder.Build();
 	}
