@@ -85,3 +85,35 @@
 
 
 
+<a href="https://youtu.be/SVcY_m5dvmE" align="center">Project 4 Youtube link</a>
+<h2>Project 4 Contribution of teammates</h2>
+
+<table >
+  <tr>
+    <th>S.NO</th>
+    <th>NAME</th>
+    <th>GITHUB ID</th>
+    <th>CONTRIBUTION</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>CHARAN REDDY</td>
+    <td>charanreddy13</td>
+    <td>Added service to link the database and UI </td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Maheswar Reddy</td>
+    <td>maheswarnani91</td>
+    <td>Updated the Mvvm to store the data to database</td>
+  </tr>
+   <tr>
+    <td>3</td>
+    <td>Divya Velaga</td>
+    <td>Divyavelaga1</td>
+    <td>Added the packages and connected to the database and UI to add clear button </td>
+  </tr>
+</table>
+
+
+
